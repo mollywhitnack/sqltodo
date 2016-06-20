@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script   src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>To Do</title>
+</head>
+<body>
+<div class="title container"><h1>TO DO LIST</h1></div>
+
+  <div class="container">
+    <table class="header">
+      <tr>
+        <td>Description</td>
+        <td>Due</td>
+        <td>Done</td>
+      </tr>
+    </table>
+    <div class="tableArea">
+    </div>
+
+    <div class = "addButton"><button class="btn btn-primary addNewTask">Add New To Do</button></div>
+
+    <div class = "newInput">
+      <form><input  type = "date" class = "newDueDate"></form>
+      <form><textarea class = "newDescription">Description</textarea></form>
+      <span class = "inputButtons">
+        <button class="btn btn-primary submitInput">Submit</button>
+        <button class="btn btn-danger cancelInput">Cancel</button>
+      </span>
+    </div>
+  </div>
+
+
+
+  <div class="template container">
+    <table class="header">
+      <tr>
+        <td class = "description">Description</td>
+        <td class = "due">Due</td>
+        <td class = "done">Done</td>
+      </tr>
+    </table>
+  </div>
+
+  
+
+
+  
+</body>
+</html>

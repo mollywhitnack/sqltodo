@@ -1,0 +1,25 @@
+td{
+  border: 1px solid #000;
+  width: 200px;
+}
+
+.template{
+  display: none;
+}
+
+.addButton{
+  padding-top: 20px;
+}
+
+.newInput{
+padding-top: 20px;
+}
+
+.newDescription{
+  margin-top: 10px;
+  width:200px;
+}
+
+.newInput{
+  display: none;
+}
