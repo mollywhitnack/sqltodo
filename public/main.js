@@ -250,10 +250,54 @@ function reverseSortVotes(){
   .fail((jq, err, status )=> console.log("error : ", err, " status ", status));
 }
 
+var letters = '';
+
 function filter(event){
   var c = String.fromCharCode(event.which);
+  var num = event.which;
   console.log("let: ", c);
+
+  $.get('tasks')
+  .done(function(data){
+      console.log("data: " , data);
+      var $tasks = [];
+
+      if(num === 8)
+        letters = letters.substring(0, letters.length-1);
+      else
+        letters += c;
+ 
+      for(var i =0; i<data.length;i++){
+        var description = data[i].description.toLowerCase();
+        letters = letters.toLowerCase();
+        if(letters === description.substring(0, letters.length)){
+        
+
+          var due = data[i].duedate;
+          var done = data[i].done;
+          //console.log("votes in load: ", done);
+          var id = data[i].id;
+          console.log("Done/votes: ", done);
+          var $temp = $('.template').clone();
+          $temp.find('.editNdelete').find('.upvotebtn').data('votes', done);
+          $temp.find('.editNdelete').find('.upvotebtn').data('id', id);
+          $temp.find('.editNdelete').find('.downvotebtn').data('votes', done);
+          $temp.find('.editNdelete').find('.downvotebtn').data('id', id);
+          $temp.find('.editNdelete').find('.deleteBtn').data('id', id);
+          $temp.find('.description').text(description);
+          $temp.find('.due').text(due);
+          $temp.find('.done').text(done);
+          $temp.removeClass('template');
+          $tasks.push($temp);
+           //console.log("votes in load: ", $temp.find('.editNdelete').find('.upvotebtn').data('votes'));
+        }
+      }
+      $('.tableArea').empty().append($tasks);  
+
+    })
+  .fail((jq, err, status )=> console.log("error : ", err, " status ", status));
 }
+
 
 
 /*  var num = event.which;

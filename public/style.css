@@ -77,21 +77,15 @@ padding-top: 20px;
 }
 
 .filter{
-  width:100px;
+  width:120px;
 }
 
-@media screen and (max-width: 992px){
-  .description{
-    width:130px;
+@media screen and (max-width: 994px){
+  .personH,{
+    width:115px;
   }
-  .personH {
-    width: 129px;
-  }
-  .quoteH{
-    width: 318px;
-  } 
-  .due {
-    width: 330px;
+  .quoteH, .due{
+ 
   }
 }
 
