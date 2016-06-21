@@ -1,14 +1,37 @@
 td{
   border: 1px solid #000;
-  width: 200px;
 }
 
 .template{
   display: none;
 }
 
+.description, .personH{
+  padding-left: 4px;
+  width:150px;
+}
+
 .addButton{
   padding-top: 20px;
+}
+
+.due, .quoteH{
+  padding-left: 5px;
+  width:300px;
+}
+.upvotebtn{
+  margin-left: 5px;
+}
+.editbtn{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.done, .votesH{
+  height: 50px;
+  text-align: center;
+  width:150px;
+
 }
 
 .newInput{
@@ -16,10 +39,65 @@ padding-top: 20px;
 }
 
 .newDescription{
-  margin-top: 10px;
-  width:200px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.newDueDate{
+  margin-bottom:10px;
+  width:700px;
+  display: inline-block;
 }
 
 .newInput{
   display: none;
 }
+
+.editNdelete{
+  border:none;
+  width: 340px;
+}
+
+.glyphicon-sort-by-attributes:before{
+    border: solid 1px;
+    color: #1380ec;
+    border-radius: 2px 2px 2px 2px;
+    margin-left: 10px;
+    padding: 3px;
+    background-color: white;
+}
+.glyphicon-sort-by-attributes-alt:before{
+    border: solid 1px;
+    color: #1380ec;
+    border-radius: 2px 2px 2px 2px;
+    margin-left: 10px;
+    padding: 3px;
+    background-color: white;
+
+}
+
+.filter{
+  width:100px;
+}
+
+@media screen and (max-width: 992px){
+  .description{
+    width:130px;
+  }
+  .personH {
+    width: 129px;
+  }
+  .quoteH{
+    width: 318px;
+  } 
+  .due {
+    width: 330px;
+  }
+}
+
+
+
+
+
+
+

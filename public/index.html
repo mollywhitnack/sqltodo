@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script   src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="//code.jquery.com/jquery-3.0.0.min.js"></script>
   <script src="main.js"></script>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <title>To Do</title>
+  <title>Quotes</title>
 </head>
 <body>
-<div class="title container"><h1>TO DO LIST</h1></div>
+<div class="title container"><h1>Quotes</h1></div>
 
   <div class="container">
     <table class="header">
       <tr>
-        <td>Description</td>
-        <td>Due</td>
-        <td>Done</td>
+        <td class = "personH">Name <!--<input type = "text" class = "filter">--></td>
+        <td class = "quoteH">Quote</td>
+        <td class = "votesH"><span class="sortVotes glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span><span class="reverseSortVotes glyphicon glyphicon-sort-by-attributes-alt" aria-hidden="true"></span></td>
       </tr>
     </table>
     <div class="tableArea">
     </div>
 
-    <div class = "addButton"><button class="btn btn-primary addNewTask">Add New To Do</button></div>
+    <div class = "addButton"><button class="btn btn-primary addNewTask">Add New Quote</button></div>
 
     <div class = "newInput">
-      <form><input  type = "date" class = "newDueDate"></form>
-      <form><textarea class = "newDescription">Description</textarea></form>
+      <form><input  type = "text" class = "newDescription" placeholder="Name"></form>
+      <form><input type = "text" class = "newDueDate" placeholder = "Quote"></form>
       <span class = "inputButtons">
         <button class="btn btn-primary submitInput">Submit</button>
         <button class="btn btn-danger cancelInput">Cancel</button>
@@ -36,12 +36,15 @@
 
 
 
-  <div class="template container">
+  <div class="template">
     <table class="header">
       <tr>
         <td class = "description">Description</td>
         <td class = "due">Due</td>
-        <td class = "done">Done</td>
+        <td class = "done"></td>
+        <td class = "editNdelete"><button class = "btn btn-success upvotebtn"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+        <button class = "btn btn-warning downvotebtn"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></button>
+        <!--<button class = "btn btn-info editbtn">Edit</button>--><button class = "btn btn-danger deleteBtn">Delete</button></td>
       </tr>
     </table>
   </div>
